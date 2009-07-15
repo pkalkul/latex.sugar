@@ -44,18 +44,12 @@
                   </ends-with>
         </zone>
    
-       
-  
-        
-
-        
-        
-                   <zone name="comment.latex">
+                <zone name="comment.latex">
             <starts-with>
                 <expression>\%</expression>
             </starts-with>
             <ends-with>
-                <expression>^$</expression>
+                <expression>$</expression>
 
             </ends-with>
         </zone>
