@@ -20,14 +20,15 @@
    
                <zone name="function.latex">
             <starts-with>
-                <expression>(\\)([a-zA-Z]*\{)(.*)(\}+)</expression>
+                <expression>(\\)([a-zA-Z]*\{)(.*?)(\})</expression>
                 <capture number="1" name="delimiter.latex" />
                 <capture number="2" name="function.latex" />
                 <capture number="3" name="string.latex" />
             </starts-with>
             <ends-with>
-                <expression>\s|$</expression>
+                <expression>\}|\s|$</expression>
                   </ends-with>
+
         </zone>
         
 
