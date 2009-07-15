@@ -1,0 +1,38 @@
+This is a very preliminary attempt to create a syntax sugar for latex.  
+
+What works:
+
+basic headings (chapters, sections, subsections)
+latex functions
+comments
+
+That's about it for the moment.  Please do add improvements.  I barely know what I am doing.
+
+Also, you may want to add the following to your theme:
+
+/* @group Latex */
+
+latex.heading {
+	color: #448C27;
+		font-weight: bold;	
+}
+
+heading.latex{
+	color: #448C27;
+		font-weight:bold;	
+		background: rgba(150, 0, 0, .08);	
+}
+
+
+function.latex {
+	color: #666666;
+	font-weight: bold;		
+}
+
+
+
+delimiter.latex {
+	color: #333399;
+}
+
+/* @end */
