@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<syntax name="text.latex">
+    <zones>
+
+        <zone name="heading.latex">
+            <starts-with>
+                <expression>^(\\)(section|subsection|subsubsection|chapter|part)</expression>
+                <capture number="0" name="tag.open.heading.textile" />
+                <capture number="1" name="function.latex" />
+                <capture number="2" name="entity.name" />
+            </starts-with>
+            <ends-with>
+                <expression>^$</expression>
+ 
+            </ends-with>
+        </zone>
+        
+               <zone name="function.latex">
+            <starts-with>
+                <expression>(\\)([a-z]*)</expression>
+                <capture number="0" name="delimiter.latex" />
+                 <capture number="1" name="function.latex" />
+                <capture number="2" name="string.latex" />
+            </starts-with>
+            <ends-with>
+                <expression>\}</expression>
+      
+            </ends-with>
+        </zone>
+        
+                   <zone name="function.latex">
+            <starts-with>
+                <expression>(\\)([a-z]*)</expression>
+            </starts-with>
+            <ends-with>
+                <expression>^$</expression>
+
+            </ends-with>
+        </zone>
+        
+        
+                   <zone name="comment.latex">
+            <starts-with>
+                <expression>\%</expression>
+            </starts-with>
+            <ends-with>
+                <expression>^$</expression>
+
+            </ends-with>
+        </zone>
+        
+            <zone name="function.latex">
+            <starts-with>
+                <expression>\\\\</expression>
+             </starts-with>
+            <ends-with>
+                <expression>^$</expression>
+
+            </ends-with>
+        </zone>
+        
+
+       
+
+      
+        
+    </zones>
+    <library>
+        <collection name="span-attributes">
+         
+        </collection>
+    </library>
+</syntax>

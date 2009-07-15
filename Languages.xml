@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <language id="Sugar.latex">
+      <name>LaTeX</name>
+      <root-zone>text.latex</root-zone>
+      
+      <detectors>
+        <extension casesensitive="false">tex</extension> 
+      </detectors>
+  </language>
+</settings>
