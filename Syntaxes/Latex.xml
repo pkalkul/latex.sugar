@@ -14,7 +14,30 @@
  
             </ends-with>
         </zone>
-        
+
+   <zone name="linebreak.latex">
+            <starts-with>
+                <expression>(\\\\$)</expression>
+                <capture number="0" name="delimiter.latex" />
+            </starts-with>
+            <ends-with>
+                <expression>^$</expression>
+                  </ends-with>
+        </zone>
+   
+   
+    <zone name="command.latex">
+            <starts-with>
+                <expression>(\\)([a-z]*$)</expression>
+                <capture number="0" name="delimiter.latex" />
+                 <capture number="1" name="function.latex" />
+                <capture number="2" name="string.latex" />
+            </starts-with>
+            <ends-with>
+                <expression>^$</expression>
+                  </ends-with>
+        </zone>
+   
                <zone name="function.latex">
             <starts-with>
                 <expression>(\\)([a-z]*)</expression>
@@ -24,19 +47,14 @@
             </starts-with>
             <ends-with>
                 <expression>\}</expression>
-      
-            </ends-with>
+                  </ends-with>
         </zone>
         
-                   <zone name="function.latex">
-            <starts-with>
-                <expression>(\\)([a-z]*)</expression>
-            </starts-with>
-            <ends-with>
-                <expression>^$</expression>
 
-            </ends-with>
-        </zone>
+       
+  
+        
+
         
         
                    <zone name="comment.latex">
@@ -49,21 +67,10 @@
             </ends-with>
         </zone>
         
-            <zone name="function.latex">
-            <starts-with>
-                <expression>\\\\</expression>
-             </starts-with>
-            <ends-with>
-                <expression>^$</expression>
 
-            </ends-with>
-        </zone>
-        
 
-       
 
-      
-        
+  
     </zones>
     <library>
         <collection name="span-attributes">
