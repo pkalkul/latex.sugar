@@ -2,18 +2,18 @@
 <syntax name="text.latex">
     <zones>
 
-        <zone name="heading.latex">
-            <starts-with>
-                <expression>^(\\)(section|subsection|subsubsection|chapter|part)</expression>
-                <capture number="0" name="tag.open.heading.textile" />
-                <capture number="1" name="function.latex" />
-                <capture number="2" name="entity.name" />
-            </starts-with>
-            <ends-with>
-                <expression>^$</expression>
- 
-            </ends-with>
-        </zone>
+        <zone name="heading.latex">
+            <starts-with>
+                <expression>^(\\)(section|subsection|subsubsection|chapter|part)</expression>
+                <capture number="0" name="tag.open.heading.textile" />
+                <capture number="1" name="function.latex" />
+                <capture number="2" name="entity.name" />
+            </starts-with>
+            <ends-with>
+                <expression>^$</expression>
+ 
+            </ends-with>
+        </zone>
 
    <zone name="linebreak.latex">
             <starts-with>
@@ -28,10 +28,8 @@
    
     <zone name="command.latex">
             <starts-with>
-                <expression>(\\)([a-z]*$)</expression>
+                <expression>(\\)([a-zA-Z]*$)</expression>
                 <capture number="0" name="delimiter.latex" />
-                 <capture number="1" name="function.latex" />
-                <capture number="2" name="string.latex" />
             </starts-with>
             <ends-with>
                 <expression>^$</expression>
@@ -40,7 +38,7 @@
    
                <zone name="function.latex">
             <starts-with>
-                <expression>(\\)([a-z]*)</expression>
+                <expression>(\\)([a-zA-Z]*)(\{)</expression>
                 <capture number="0" name="delimiter.latex" />
                  <capture number="1" name="function.latex" />
                 <capture number="2" name="string.latex" />
